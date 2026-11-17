@@ -9,6 +9,14 @@ class init {
 		this.aIdx = 0
 		this.txtViewIdx = 0
 		this.timeout = 30
+		this.timeout = 1
+
+		let params = new URLSearchParams(document.location.search);
+		let viewAns = params.get("viewAns");
+		if (viewAns != null) {
+			$('#isAnsChk').prop("checked", true)
+			$('#isAns').show()
+		}
 
 		new Promise(async () => {
 			await this.selQue(this.qIdx, this.aIdx)
@@ -31,10 +39,11 @@ class init {
 		try {
 			let self = this
 
+			let isChk = $('#isAnsChk').prop("checked")
 			let _ans = ans[_qIdx];
 			$('#Anse').empty()
 			for (var i = 0; i < _ans.length; i++)
-				$('#Anse').append(`<p onclick="create.selIdx(this)" aIdx=${i}>-> ${_ans[i].a}</p>\r\n`)
+				$('#Anse').append(`<p onclick="create.selIdx(this)" ${isChk && _ans[i].is ? 'class="ans"' : ''} aIdx=${i}>-> ${_ans[i].a}</p>\r\n`)
 
 			self.qIdx++
 		}

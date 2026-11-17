@@ -26,6 +26,15 @@
         color: white;
     }
 
+    #isAns {
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 10px;
+        color: white;
+        display: none;
+    }
+
     #Ques {
         padding: 5px;
         height: 300px;
@@ -49,10 +58,17 @@
         cursor: pointer;
         margin: 0 25px 0 25px;
     }
+
+    .ans {
+        border: #42ff00 1px solid;
+    }
 </style>
 
 <body>
     <div id="Message"></div>
+    <div id="isAns">
+        <label><input id="isAnsChk" type="checkbox" />顯示解答</label>
+    </div>
     <div id="Ques"></div>
     <div id="Anse"></div>
 
