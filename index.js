@@ -9,7 +9,7 @@ class init {
 		this.aIdx = 0
 		this.txtViewIdx = 0
 		this.timeout = 30
-		this.timeout = 1
+		// this.timeout = 1
 
 		let params = new URLSearchParams(document.location.search);
 		let viewAns = params.get("viewAns");
