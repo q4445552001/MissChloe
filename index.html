@@ -8,7 +8,7 @@
     <meta property="og:title" content="MissChloe">
     <meta property="og:description" content="MissChloe 玩出計畫">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="./index.js?20261022"></script>
+    <script src="./index.js?1"></script>
     <title>MissChloe</title>
 </head>
 
@@ -61,6 +61,13 @@
         margin: 0 25px 0 25px;
     }
 
+    #Reload {
+        padding: 10px;
+        cursor: pointer;
+        margin: 50px;
+        display: none;
+    }
+
     .ans {
         border: #42ff00 1px solid;
     }
@@ -69,7 +76,7 @@
 <body>
     <div id="Message"></div>
     <div id="isAns">
-        <label><input id="isAnsChk" type="checkbox" />顯示解答</label>
+        <label><input id="isAnsChk" type="checkbox" />解答提示</label>
     </div>
     <div id="Ques"></div>
     <div id="Anse"></div>
@@ -80,6 +87,7 @@
             <label onclick="create.join()">我接受</label>
             <label onclick="create.rejuct()">我拒絕</label>
         </p>
+        <p id="Reload" class="ans" onclick="window.location.reload()">重新開始</p>
     </div>
 </body>
 
